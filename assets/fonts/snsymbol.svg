@@ -1,0 +1,32 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2019-2-14: Created with FontForge (http://fontforge.org)
+-->
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+<metadata>
+Created by FontForge 20161004 at Thu Feb 14 13:14:11 2019
+ By m
+Copyright (c) 2019, m
+</metadata>
+<defs>
+<font id="snsymbol" horiz-adv-x="1734" >
+  <font-face 
+    font-family="snsymbol"
+    font-weight="400"
+    font-stretch="normal"
+    units-per-em="2048"
+    panose-1="2 0 5 9 0 0 0 0 0 0"
+    ascent="1593"
+    descent="-455"
+    bbox="115 172 1619 998"
+    underline-thickness="116"
+    underline-position="-183"
+    unicode-range="U+2933-2933"
+  />
+    <missing-glyph />
+    <glyph glyph-name="uni2933" unicode="&#x2933;" 
+d="M524 814q-65 0 -108 -20.5t-74.5 -58t-58 -88.5t-52.5 -120l-116 55q36 87 75.5 152t88.5 113t111.5 74t147.5 26q68 0 124.5 -22t104.5 -54.5t91.5 -71t86.5 -71t88 -54.5t97 -22h266l-229 291l59 55l393 -381v-64l-393 -381l-59 55l229 292h-269q-74 0 -130.5 22
+t-104.5 55t-89.5 71t-84 70.5t-89.5 54.5t-105 22z" />
+  </font>
+</defs></svg>

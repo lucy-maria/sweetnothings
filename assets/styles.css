@@ -1,0 +1,433 @@
+html, body, div, span, h1, h2, h3, p, a, em, img, strong, u, ol, ul, li, footer, header, menu, nav, section, video {
+    margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+    footer, header, menu, nav, section { display: block; }
+    body { line-height: 1; }
+    ol, ul { list-style: none; }
+    blockquote, q { quotes: none; }
+    blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+    table { border-collapse: collapse; border-spacing: 0; }
+    html, body { height: 100%; 
+    }
+    /* reset end */
+    
+    @font-face {
+        font-family: 'bluu';
+        src: url('fonts/bluunext-bold-webfont.woff2') format('woff2'),
+             url('fonts/bluunext-bold-webfont.woff') format('woff'),
+             url('fonts/bluunext-bold.ttf') format('truetype'),
+             url('fonts/bluunext-bold-webfont.svg#bluu_nextbold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    @font-face {
+        font-family: 'bluu';
+        src: url('fonts/bluunext-bolditalic-webfont.woff2') format('woff2'),
+             url('fonts/bluunext-bolditalic-webfont.woff') format('woff'),
+             url('fonts/bluunext-bolditalic.ttf') format('truetype'),
+             url('fonts/bluunext-bolditalic-webfont.svg#bluu_nextbold_italic') format('svg');
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    @font-face {
+        font-family: 'snsymbol';
+        src: url('fonts/snsymbol.woff') format('woff'),
+             url('fonts/snsymbol.ttf') format('truetype'),
+             url('fonts/snsymbol.svg#snsymbol') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
+    body {
+        background-color: #f03;
+    }
+    
+    #poem-container {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid #f03 1em;
+        box-sizing: border-box;
+        background: white;
+        color: #f03;
+        overflow: hidden;
+        font-size: 1rem;
+        cursor: url("../assets/cursor-small.svg"), auto;
+    }
+    
+    #poem {
+        font-size: 1rem;
+        max-width: 90vw; 
+        font-family: 'bluu', sans-serif;
+        line-height: 1.875em;
+        margin-bottom: 1.85em;
+        /*border: 1px dashed pink;*/    
+    }
+    
+    #poem .word {
+        display: block;
+        /*word-break: keep-all;
+        word-break: break-all;*/
+        -webkit-hyphens: none;
+        -ms-hyphens: none;
+        hyphens: none;
+    }
+    
+    #poem .word .inner::selection {
+        color: white;
+        background: #f03;
+    }
+    
+    #poem .click {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    #button-about {
+        z-index: 30;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 3em 1.5em 1.5em 3em;
+        width: 35px;
+        height: 35px;
+    }
+    
+    #button-about .rotate {
+        position: absolute;
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+    
+    #button-about img {
+        width: 35px;
+        transition-duration: 0.5s;
+    }
+    
+    #button-about:hover img {
+        transform-origin: center;
+        animation: heartBeat 1s ease-in-out infinite;
+    }
+    
+    #button-back {
+        width: 1em;
+        margin: 0 auto 1em;
+    }
+    
+    .button-hidden {
+        cursor: pointer;
+    }
+    
+    #button {
+        display: none;
+        z-index: 40;
+        position: fixed;
+        height: 40px;
+        width: 40px;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+        font-family: sans-serif;
+        padding: 3em 3em 1.9em 1.5em;
+        color: #f03;
+    }
+    #button span {
+        font-size: 3em;
+        display: block;
+        transform: rotate(90deg);
+    }
+    
+    #button:hover span {
+        animation: heartBeatRotated 1s ease-in-out infinite;
+    }
+    
+    #about-container {
+        display: none;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        right: 0;
+        z-index: 50;
+        overflow-x: hidden;
+        box-sizing: border-box;
+        background-color: #f03;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.25em;
+        line-height: 1.11em;
+        letter-spacing: 0.055em;
+    }
+    
+    #about-container #about-wrapper {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    
+    #about-container h1 {
+        margin-bottom: 1.15em;
+        margin-top: 1.2em;
+        text-align: center;
+    }
+    
+    #about-container .caps {
+        font-variant: all-petite-caps;
+    }
+    
+    #about-container p {
+        font-size: 1.1em;
+        margin-bottom: 0.75em;
+        max-width: 35em;
+    }
+    #about-container a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    hr { 
+        overflow: visible;
+        padding: 0; 
+        border: none; 
+        color: white;
+        text-align: center; 
+        max-width: 50%;
+        margin-top: 3em;
+        margin-bottom: 1.75em;
+    }
+    
+    hr:after { 
+        font-family: sans-serif;
+        content: "\2665\FE0E"; 
+        display: inline-block; 
+        position: relative; 
+        top: -0.65em;
+        font-size: 1em; 
+        padding: 0 1.4em;
+        background: #f03; 
+        font-weight: lighter;
+    }
+    
+    .save-icon, 
+    #button span {
+        font-family: 'Cambria', 'snsymbol', sans-serif; 
+    }
+    
+    .save-icon {
+        display: inline-block;
+        transform: rotate(90deg);
+        font-size: 1.5em;
+        margin: 0 -3px;
+    }
+    
+    #about-container a:hover {
+        border: 0;
+        border-bottom: solid white 0.075em;
+      }
+    
+    #about-container .text-large {
+        font-size: 2.6em;
+        line-height: 1.04em;
+        max-width: none;
+        letter-spacing: 0.04em;
+    }
+    
+    #about-container .underline {
+        border: 0;
+        border-bottom: solid white 0.075em;
+    }
+    
+    #about-container .credit {
+        text-align: center;
+        max-width: 21em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .text-bluu {
+        font-family: 'bluu', sans-serif;
+    }
+    
+    #splashpage {
+        height: 100%; 
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #splashpage #logo {
+        width: 100%;
+        max-width: 42em;
+        margin: 0 1em;
+        padding-bottom: 10vh;
+    }
+    
+    #splashpage-link {
+        color: transparent;
+    }
+    
+    #poem-container.mob-hidden {
+        display: none;
+    }
+    
+    @media only screen and (min-width: 800px) {
+        #poem-container.mob-hidden {
+            display: flex;
+        }
+    
+        .button-hidden {
+            display: none;
+        }
+    
+        #poem-container {
+            width: 50%;
+        }
+    
+        #poem {
+            max-width: 46vw;
+        }
+    
+        #about-container {
+            width: 50%;
+            display: block;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0) 20px, rgba(0, 0, 0, 0) 100%);
+        }
+     
+        #about-container #about-wrapper {
+            margin-left: 45px;
+            margin-right: 45px;
+        }
+    
+        #about-container p.last {
+            margin-bottom: 3em;
+        }
+    }
+    
+    @media only screen and (max-width: 380px) {
+        #about-container .text-large {
+            font-size: 2.2em;
+        }
+    }
+    
+    @keyframes heartBeat {
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.15);
+        }
+        40% {
+            transform: scale(1);
+        }
+        55% {
+            transform: scale(1.15);
+        }
+        65% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+    @keyframes heartBeatRotated {
+        0% {
+            transform: scale(1) rotate(90deg);
+        }
+        25% {
+            transform: scale(1.15) rotate(90deg);
+        }
+        40% {
+            transform: scale(1) rotate(90deg);
+        }
+        55% {
+            transform: scale(1.15) rotate(90deg);
+        }
+        65% {
+            transform: scale(1) rotate(90deg);
+        }
+        100% {
+            transform: scale(1) rotate(90deg);
+        }
+    }
+    
+    /* Poem Layout properties */
+    .word.margin-0  { margin-left: 0;           }
+    .word.margin-1  { margin-left: 0.3125em;    }
+    .word.margin-2  { margin-left: 0.625em;     }
+    .word.margin-3  { margin-left: 0.9375em;    }
+    .word.margin-4  { margin-left: 1.25em;      }
+    .word.margin-5  { margin-left: 1.5625em;    }
+    .word.margin-6  { margin-left: 1.875em;     }
+    .word.margin-7  { margin-left: 2.1875em;    }
+    .word.margin-8  { margin-left: 2.5em;       }
+    .word.margin-9  { margin-left: 2.8125em;    }
+    
+    .word.size-1 .inner    { font-size: 0.625em;       }
+    .word.size-2 .inner    { font-size: 0.859375em;    }
+    .word.size-3 .inner    { font-size: 1.09375em;     }
+    .word.size-4 .inner    { font-size: 1.328125em;    }
+    .word.size-5 .inner    { font-size: 1.5625em;      }
+    .word.size-6 .inner    { font-size: 1.796875em;    }
+    .word.size-7 .inner    { font-size: 2.03125em;     }
+    .word.size-8 .inner    { font-size: 2.265625em;    }
+    .word.size-9 .inner    { font-size: 2.5em;         }
+    
+    @media only screen and (max-width: 346px) {
+        #poem {
+            font-size: 0.917rem;
+            font-size: 4.58vw;
+        }
+    
+        .word.size-1 .inner    {
+            font-size: 0.859375em;
+        }
+    }
+    
+    .hide-text {
+        display: none;
+    }
+    
+    /* rollover hearts */
+    a.heart-rollover::before, 
+    a.heart-rollover::after {
+      content: "\2665\FE0E";
+      position: absolute;
+      opacity: 0;
+      text-decoration: none;
+      pointer-events: none;
+    }
+    
+    a.heart-rollover::before {
+      margin-left: 1em;
+    }
+    
+    a.heart-rollover::after {
+      margin-left: -2em;
+    }
+    
+    a.heart-rollover:hover::before, 
+    a.heart-rollover:hover::after {
+            animation: heart 0.8s infinite;
+    }
+    a.heart-rollover:hover::after {
+      animation-duration: 1s;
+        animation-delay: 0.2s;
+    }
+    
+    @keyframes heart {
+      0% {
+        transform: translate(0px, 0px) scale(0.5) rotate(0deg) ;
+            opacity: 1;
+      }
+      100% {
+            transform: translate(40px, -30px) rotate(20deg) scale(2);
+            opacity: 0;
+      }
+    }
+    
