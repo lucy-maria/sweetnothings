@@ -62,7 +62,7 @@ html, body, div, span, h1, h2, h3, p, a, em, img, strong, u, ol, ul, li, footer,
     }
     
     #poem {
-        font-size: 1rem;
+        font-size: 1.3rem;
         max-width: 90vw; 
         font-family: 'bluu', sans-serif;
         line-height: 1.875em;
