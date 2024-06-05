@@ -175,6 +175,10 @@ html, body, div, span, h1, h2, h3, p, a, em, img, strong, u, ol, ul, li, footer,
         margin-top: 1.2em;
         text-align: center;
     }
+
+    #about-container h1 a:hover {
+        border-bottom: 0;
+    }
     
     #about-container .caps {
         font-variant: all-petite-caps;
