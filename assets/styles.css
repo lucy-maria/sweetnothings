@@ -369,15 +369,15 @@ html, body, div, span, h1, h2, h3, p, a, em, img, strong, u, ol, ul, li, footer,
     .word.margin-8  { margin-left: 2.5em;       }
     .word.margin-9  { margin-left: 2.8125em;    }
     
-    .word.size-1 .inner    { font-size: 0.625em;       }
-    .word.size-2 .inner    { font-size: 0.859375em;    }
-    .word.size-3 .inner    { font-size: 1.09375em;     }
-    .word.size-4 .inner    { font-size: 1.328125em;    }
-    .word.size-5 .inner    { font-size: 1.5625em;      }
-    .word.size-6 .inner    { font-size: 1.796875em;    }
-    .word.size-7 .inner    { font-size: 2.03125em;     }
-    .word.size-8 .inner    { font-size: 2.265625em;    }
-    .word.size-9 .inner    { font-size: 2.5em;         }
+    .word.size-1 .inner { font-size: 0.9em; }
+    .word.size-2 .inner { font-size: 1.1em; }
+    .word.size-3 .inner { font-size: 1.3em; }
+    .word.size-4 .inner { font-size: 1.5em; }
+    .word.size-5 .inner { font-size: 1.7em; }
+    .word.size-6 .inner { font-size: 1.9em; }
+    .word.size-7 .inner { font-size: 2.1em; }
+    .word.size-8 .inner { font-size: 2.3em; }
+    .word.size-9 .inner { font-size: 2.5em; }
     
     @media only screen and (max-width: 346px) {
         #poem {
