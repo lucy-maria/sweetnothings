@@ -27,7 +27,7 @@ function checkUrlValue() {
   if (urlGet) {
     processUrl(urlGet);
   } else {
-    poemContainer.innerHTML = '<p class="click">click <br>to <br>generate</p>';
+    poemContainer.innerHTML = '<a class="click heart-rollover">click <br>to <br>generate</a>';
   }
 }
 

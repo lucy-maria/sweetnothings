@@ -85,6 +85,7 @@ html, body, div, span, h1, h2, h3, p, a, em, img, strong, u, ol, ul, li, footer,
     }
     
     #poem .click {
+        display: block;
         text-align: center;
         font-size: 1.5em;
     }
