@@ -307,10 +307,6 @@ html, body, div, span, h1, h2, h3, p, a, em, img, strong, u, ol, ul, li, footer,
             margin-left: 45px;
             margin-right: 45px;
         }
-    
-        #about-container p.last {
-            margin-bottom: 3em;
-        }
     }
     
     @media only screen and (max-width: 380px) {
